@@ -1,0 +1,55 @@
+section.firstSection{
+    padding: 50px 50px 80px;
+    background-color: $cultured;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    h2{
+        color: $granite_gray;
+        font-size: 2.5rem;
+        letter-spacing: 0.2rem;
+        font-weight: 700;
+        margin: 50px 0;
+        @media  screen and (max-width: 768px) {
+            margin: 40px 0 50px;
+            font-size: 1.8rem;
+        }
+    }
+    .introDesc{
+        margin-right: 80px;
+        p{
+            width: 100%;
+            max-width: 800px;
+         
+            text-align: justify;
+         
+            @media  screen and (max-width: 768px) {
+                max-width: 350px;
+            }
+        }
+    }
+    .introImg{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        img{
+            margin-top: 100px;
+            width: 100%;
+            height: 350px;
+        }
+    }
+    
+    @media screen and (max-width: 1355px) {
+        display: block;
+        .introDesc{
+            margin-right: 0;
+        }
+        .introImg img{
+            margin: 0 auto;
+        }
+       
+    }
+    
+}

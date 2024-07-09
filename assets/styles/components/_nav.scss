@@ -1,0 +1,151 @@
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(17, 16, 16, 0.98);
+    z-index: 1;
+}
+header{
+    .header-img{
+        height: 350px;
+        background-image: url(/assets/images/kitchen-cover.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: brightness(0.9);
+    }
+    .head{
+        margin-top: -85px;
+        position: relative;
+        
+    }
+    .hamburger {
+        position: relative;
+        display: none;
+        width: 35px;
+        cursor: pointer;
+        margin: 13px 0;
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+        z-index: 1;
+      }
+      
+      .hamburger .bar, .hamburger:after, .hamburger:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: $white;
+        margin: 5px 0 0;
+        transition: 0.4s;
+      }
+      
+      .hamburger.is-active:before {
+        transform: rotate(-45deg) translate(-5px, 5px);
+      }
+      
+      .hamburger.is-active:after {
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+      
+      .hamburger.is-active .bar {
+        opacity: 0;
+      }
+      @media (max-width: 768px) {
+        .header-img{
+            height: 200px;
+        }
+        .navbar-menu {
+          display: none;
+        }
+        .hamburger{
+            display: block;
+        }
+        .header{
+            display: block !important;
+           
+        }
+       .navbar-menu.is-active{
+            display: block;
+            position: relative;
+            ul{
+                display: flex;
+                justify-content: space-around;
+                margin: 0;
+                position: absolute;
+                padding: 8px;
+                width: 100%;
+                background-color: rgba(17, 16, 16, 0.98);
+                border-radius: 5px;
+                li{
+                    margin: 0 15px;
+                    a{
+                        color: $white;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                        &:hover, &:focus{
+                            color: $white;
+                            border-bottom: 2px solid $white;
+                        }
+                       
+                    }
+                }
+            }
+        }
+    }
+   .header{
+        padding: 10px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .logo-header{
+            display: flex;
+            img{
+                margin-top: -15px;
+                width:70px;
+                height:70px;
+                position: absolute;
+            }
+            h1{
+                color: $white;
+                margin-left: 80px;
+            }
+        }
+       
+        ul{
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            li{
+                margin: 0 15px;
+                a{
+                    color: $white;
+                    font-size: 1.2rem;
+                    position: relative;
+                    cursor: pointer;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        top:  30px;
+                        bottom: 0px;
+                        transition: all 0.5s ease-in-out 0s;
+                        transform: scaleX(0);
+                    }
+                    &:hover::before{
+                        transform: scaleX(1);
+                        visibility: visible;
+                        background-color: #ffffff;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 768px) {
+            padding: 10px 15px;
+        }
+   }
+    
+}

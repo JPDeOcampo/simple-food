@@ -1,0 +1,57 @@
+section.aboutSection{
+    position: relative;
+    margin-bottom: 50px;
+    padding: 7rem 20px 8.5rem;
+    &::before{
+        content: "";
+        padding: 7rem 20px 18rem;
+        background-image: url('/assets/images/banner.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        filter: brightness(0.5);
+        
+    }
+    .about{
+        position: relative;
+        text-align: center;
+        &>h2{
+            text-align: center;
+            font-size: 2.5rem;
+            color: $white;
+            margin-bottom: 30px;
+            @media screen and (max-width: 768px){
+                margin: 0;
+            }
+        }
+        p{
+            color: $white;
+            width: 80%;
+            margin: 0 auto;
+        }
+        a{
+            border: 1px solid $white;
+            border-radius: 10px;
+            color: $white;
+            padding: 10px;
+            display: inline-block;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.02);
+                
+            }
+        }
+        @media screen and (max-width: 768px){
+            padding: 5rem 0.8rem;
+            margin-top: -110px;
+        }
+    }
+   
+   @media screen and (max-width: 768px) {
+        padding: 8rem 0px 0;
+   }
+}

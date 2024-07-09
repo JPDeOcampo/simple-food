@@ -1,0 +1,29 @@
+/*Base*/
+
+.rm-ls{
+    list-style: none;
+}
+.rm-td{
+    text-decoration: none;
+}
+.d-none{
+    display: none;
+}
+.show{
+    display: block;
+}
+.bold{
+    font-weight: 800;
+}
+.bold-500{
+    font-weight: 500;
+}
+.bold-600{
+    font-weight: 600;
+}
+.not-active{
+    color: $spanish_gray;
+}
+.no-hover{
+    pointer-events: none;
+}
